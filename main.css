@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 24px;
+    bottom: 0;
+    width: 1px;
+    background: #e5e7eb;
+    z-index: 1;
+}
+
+.dark .timeline-item::before {
+    background: #4b5563;
+}
+
+.timeline-dot {
+    z-index: 2;
+}
+
+.progress-bar {
+    border-radius: 9999px;
+    height: 8px;
+    background-color: #e5e7eb;
+    overflow: hidden;
+}
+
+.dark .progress-bar {
+    background-color: #374151;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #5D5CDE;
+}
+
+.code-block-container {
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.code-block-header {
+    display: flex;
+    padding: 10px;
+    background: #2d2d2d;
+}
+
+.window-button {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.btn-red {
+    background-color: #ff5f56;
+}
+
+.btn-yellow {
+    background-color: #ffbd2e;
+}
+
+.btn-green {
+    background-color: #27c93f;
+}
+
+/* .code-content {
+            padding: 15px;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            background: #1e1e1e;
+            color: #ffffff;
+            height: calc(100% - 32px);
+            overflow-y: auto;
+        } */
+
+.code-block {
+    position: relative;
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    z-index: 2;
+}
+
+.code-bg {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(93, 92, 222, 0.1);
+    border: 1px solid rgba(93, 92, 222, 0.2);
+    border-radius: 10px;
+    transform: rotate(3deg);
+    z-index: 1;
+}
+
+/* reuse your existing .code-content styles, but ensure no fixed height */
+.code-content {
+    color: #ffffff;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+
+.keyword {
+    color: #569CD6;
+}
+
+.type {
+    color: #4EC9B0;
+}
+
+.string {
+    color: #CE9178;
+}
+
+.comment {
+    color: #6A9955;
+}
+
+.variable {
+    color: #9CDCFE;
+}
+
+.method {
+    color: #DCDCAA;
+}
+
+@media (max-width: 768px) {
+    .timeline-item::before {
+        left: 20px;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+
+    background-color: rgba(93, 92, 222, 0.5);
+    box-shadow: none;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s,
+        background-color 0.2s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: rgba(93, 92, 222, 0.5);
+}
+
+
+
+
+
+/* float animation */
+@keyframes float {
+    0%,100% { transform: translateY(0) }
+    50%     { transform: translateY(-10px) }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  #skills h4 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  /* reset any other color you want here */
+}
+#skills h4::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 5.5rem;
+  height: 5px;
+  background-color: #5D5CDE;
+  border-radius: 2px;
+}
+
+ /* SKILLS & TECHNOLOGIES CARDS */
+#skills .skill-card {
+    background-color: #fff;                       /* light mode */
+    border-radius: 0.75rem;                       /* rounded corners */
+    padding: 1rem;                                /* compact padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;                                  /* space icon ↔ label */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+  }
+  #skills .skill-card i,
+  #skills .skill-card svg {
+    font-size: 2.5rem;                            /* larger icons */
+    margin-bottom: 0;                             /* already using gap */
+  }
+  #skills .skill-card span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: inherit;
+  }
+  
+  /* hover lift + accent border */
+  #skills .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border: 1px solid #5D5CDE;
+  }
+  
+  /* dark mode adjustments */
+  .dark #skills .skill-card {
+    background-color: #2d2d2d;
+    border: 1px solid #3d3d3d;
+  }
+  .dark #skills .skill-card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  }
+  
+  /* tighten up the grid gaps */
+  #skills .grid {
+    row-gap: 2rem;
+    column-gap: 2rem;
+  }
+
+  /* Existing styles (assumed to be in main.css) */
+.bg-dark-bg {
+    background-color: #1a202c;
+}
+.bg-dark-card {
+    background-color: #2d3748;
+}
+.text-primary {
+    color: #5D5CDE;
+}
+.bg-primary {
+    background-color: #5D5CDE;
+}
+
+/* New styles for platform selection */
+.platform-item.border-primary {
+    border-color: #5D5CDE;
+    background-color: #5D5CDE10; /* Light primary color background */
+}
+.dark .platform-item.border-primary {
+    background-color: #5D5CDE20;
+}
+.platform-item {
+    transition: all 0.2s ease;
+}
+  

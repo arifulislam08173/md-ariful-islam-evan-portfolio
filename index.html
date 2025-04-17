@@ -1,750 +1,626 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Ariful Islam Evan</title>
-</head>
-<body>
-    <h1>Md. Ariful Islam Evan</h1>
-    <p>Welcome to my portfolio</p>
-    <p>This is Md. Ariful Islam Evan</p>
-    <h1>I am a Software Engineer</h1>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Ariful Islam Evan - Software Engineer</title>
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --text-color: #1f2937;
-            --light-text: #4b5563;
-            --bg-color: #ffffff;
-            --light-bg: #f3f4f6;
-            --accent-color: #3b82f6;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background-color: var(--bg-color);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-color);
-        }
-        
-        .hero {
-            padding: 8rem 0 5rem;
-            background-color: var(--light-bg);
-            display: flex;
-            align-items: center;
-        }
-        
-        .hero-content {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-        
-        .hero-text {
-            flex: 1;
-        }
-        
-        .hero-image {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .hero-image img {
-            max-width: 350px;
-            border-radius: 50%;
-            border: 5px solid var(--primary-color);
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-        
-        .hero h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            color: var(--light-text);
-            max-width: 600px;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        .btn-outline {
-            border: 2px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-        
-        .btn-outline:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        section {
-            padding: 5rem 0;
-        }
-        
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-align: center;
-            color: var(--primary-color);
-        }
-        
-        .about-content {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-stats {
-            flex: 1;
-        }
-        
-        .stat-box {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-        
-        .stat-item {
-            flex: 1;
-            min-width: 150px;
-            background-color: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            color: var(--light-text);
-        }
-        
-        .services {
-            background-color: var(--light-bg);
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background-color: var(--bg-color);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .service-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        .experience-timeline {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 30px;
-            margin-bottom: 3rem;
-            border-left: 2px solid var(--primary-color);
-        }
-        
-        .timeline-date {
-            font-size: 0.9rem;
-            color: var(--light-text);
-            margin-bottom: 0.5rem;
-        }
-        
-        .timeline-role {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .timeline-company {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .timeline-description ul {
-            padding-left: 1.5rem;
-        }
-        
-        .timeline-description li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .skills {
-            background-color: var(--light-bg);
-        }
-        
-        .skills-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        
-        .skill-category {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .skill-category h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-        
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .skill-item {
-            background-color: var(--bg-color);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-weight: 500;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        
-        .projects {
-            background-color: var(--bg-color);
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .project-card {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .project-image {
-            height: 200px;
-            background-color: var(--light-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--primary-color);
-        }
-        
-        .project-content {
-            padding: 1.5rem;
-        }
-        
-        .project-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .project-description {
-            font-size: 0.95rem;
-            color: var(--light-text);
-            margin-bottom: 1rem;
-        }
-        
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .project-tag {
-            background-color: var(--light-bg);
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .project-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-        
-        .education {
-            background-color: var(--light-bg);
-        }
-        
-        .education-card {
-            background-color: var(--bg-color);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .education-period {
-            font-size: 0.9rem;
-            color: var(--light-text);
-            margin-bottom: 0.5rem;
-        }
-        
-        .education-degree {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .education-institution {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .education-details p {
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact {
-            background-color: var(--bg-color);
-        }
-        
-        .contact-content {
-            display: flex;
-            gap: 3rem;
-        }
-        
-        .contact-info {
-            flex: 1;
-        }
-        
-        .contact-form {
-            flex: 2;
-        }
-        
-        .contact-info h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-        
-        .contact-details {
-            margin-bottom: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            background-color: var(--light-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-color);
-        }
-        
-        .contact-text {
-            font-size: 1rem;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .social-link {
-            width: 40px;
-            height: 40px;
-            background-color: var(--light-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .social-link:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary-color);
-        }
-        
-        .submit-btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background-color: var(--secondary-color);
-        }
-        
-        footer {
-            background-color: var(--text-color);
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .footer-nav {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-nav a:hover {
-            color: var(--accent-color);
-        }
-        
-        .footer-social {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-social a {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .footer-social a:hover {
-            background-color: var(--accent-color);
-        }
-        
-        .footer-text {
-            margin-bottom: 1rem;
-        }
-        
-        .copyright {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        /* Responsive styles */
-        @media (max-width: 992px) {
-            .hero-content {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-            
-            .hero p {
-                margin: 0 auto 2rem;
-            }
-            
-            .cta-buttons {
-                justify-content: center;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .contact-content {
-                flex-direction: column;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero h2 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Ariful</div>
-                <div class="nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#education">Education</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
-    </header>
+    <title>Md. Ariful Islam Evan | Software Engineer</title>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Md. Ariful Islam Evan</h1>
-                    <h2>Software Engineer</h2>
-                    <p>Software Engineer with a track record of leading impactful projects and collaborating effectively with cross-functional teams. Committed to driving innovation, enhancing user experience, and continuously honing skills through competitive programming and lifelong learning.</p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="btn btn-primary">Contact Me</a>
-                        <a href="#projects" class="btn btn-outline">View Projects</a>
-                    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                        secondary: '#3B82F6',
+                        dark: {
+                            bg: '#181818',
+                            card: '#222222',
+                            text: '#E5E7EB',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        float: 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%,100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        if (
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+        ) {
+            document.documentElement.classList.add('dark')
+        }
+        window
+            .matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', event => {
+                document.documentElement.classList.toggle('dark', event.matches)
+            })
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+</head>
+
+<body class="font-sans bg-white dark:bg-dark-bg text-gray-800 dark:text-dark-text">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white dark:bg-dark-bg shadow-md">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="flex items-center space-x-2">
+                    <span class="text-primary font-semibold text-xl">Evan<span
+                            class="text-black dark:text-white">Portfolio</span></span>
+                </a>
+
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home"
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Home</a>
+                    <a href="#about"
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">About</a>
+                    <a href="#skills"
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Skills</a>
+                    <a href="#projects"
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Projects</a>
+                    <a href="#competitive"
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Competitions</a>
+                    <a href="#journey"
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Resume</a>
+                    <a href="#contact"
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Contact</a>
                 </div>
-                <div class="hero-image">
-                    <img src="./image/Md. Ariful Islam Evan.jpg" alt="Md. Ariful Islam Evan">
-                </div>
+
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="md:hidden hidden mt-2 py-2 bg-white dark:bg-dark-card rounded-lg shadow-lg">
+                <a href="#home"
+                    class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="#about"
+                    class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="#skills"
+                    class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Skills</a>
+                <a href="#journey"
+                    class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
+                <a href="#competitive"
+                    class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Competitions</a>
+                <a href="#resume"
+                    class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Resume</a>
+                <a href="#contact"
+                    class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
             </div>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="w-full md:w-1/2 mb-10 md:mb-0">
+                    <div class="bg-blue-50 dark:bg-primary/10 py-2 px-4 rounded-full inline-block mb-4">
+                        <span class="text-primary text-sm font-medium">• Software Engineer</span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                        I build <span class="text-secondary">elegant solutions</span> to complex problems
+                    </h1>
+
+                    <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg">
+                        <!-- Full-stack developer with expertise in JavaScript, React, Next.js, Node.js, Python, and C++.
+                        Passionate about creating clean, efficient, and high-performance applications. -->
+                        Results‑driven Software Engineer with expertise in JavaScript, React, Next.js, Node.js, Python,
+                        and C++;
+                        a proven track record of leading full‑stack projects and solving 350+ algorithmic challenges.
+                        Passionate about continuous learning, cross‑functional collaboration, and building clean,
+                        efficient, scalable high‑performance applications.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#journey"
+                            class="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-md flex items-center justify-center transition">
+                            View Projects
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+
+                        <a href="#contact"
+                            class="border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-medium px-6 py-3 rounded-md flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 transition">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- <div class="w-full md:w-5/12 code-block-container">
+                    <div class="code-block-header">
+                        <div class="window-button btn-red"></div>
+                        <div class="window-button btn-yellow"></div>
+                        <div class="window-button btn-green"></div>
+                        <div class="ml-auto text-white text-xs">C++</div>
+                    </div>
+                    <div class="code-content" id="typewriter">
+                        #include <iostream>
+                            #include <vector>
+                                #include <string>
+
+                                    class Developer {
+                                    private:
+                                    std::string name = "Md. Ariful Islam Evan";
+                                    std::string role = "Software Engineer";
+                                    std::vector<std::string> languages = {"C++", "JavaScript", "Python"};
+                                        int experience = 2;
+
+                                        public:
+                                        std::string getInfo() {
+                                        return "Building elegant solutions";
+                                        }
+
+                                        void solveProblems() {
+                                        // Creating innovative solutions
+                                        // Writing clean, efficient code
+                                        // Building robust applications
+                                        }
+
+                                        bool isLearning() {
+                                        return true; // Always learning!
+                                        }
+                                        };
+                    </div>
+                </div> -->
+
+                <div class="w-full md:w-5/12 relative">
+                    <div class="code-block p-6">
+                        <!-- header stays the same -->
+                        <div class="code-block-header">
+                            <div class="window-button btn-red"></div>
+                            <div class="window-button btn-yellow"></div>
+                            <div class="window-button btn-green"></div>
+                            <div class="ml-auto text-white text-xs">JavaScript</div>
+                        </div>
+                        <!-- this is where we’ll type -->
+                        <div class="pt-4 text-sm sm:text-base font-mono code-content" id="codeTypewriter"></div>
+                    </div>
+                    <!-- skewed background behind -->
+                    <div class="code-bg"></div>
+                </div>
+
+            </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a dedicated Software Engineer with expertise in full-stack development, focusing on modern web technologies. My experience spans from front-end frameworks like React.js and Next.js to back-end technologies such as Node.js, Express.js, and Laravel.</p>
-                    <p>With a strong foundation in competitive programming and problem-solving, I've solved over 350 problems across various platforms including CodeChef, Codeforces, and LeetCode.</p>
-                    <p>I'm passionate about creating efficient, user-friendly applications and constantly expanding my knowledge in the ever-evolving tech landscape.</p>
+    <section id="about" class="py-16 bg-gray-50 dark:bg-dark-card">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">ABOUT ME</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mt-2">Building digital experiences with precision and
+                    creativity</h3>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-6 text-gray-600 dark:text-gray-300">
+                    <p class="text-lg">
+                        I'm a passionate software engineer with a strong foundation in full-stack development and
+                        problem-solving. My journey in tech began with a curiosity about how things work, which evolved
+                        into a career building elegant and efficient software solutions.
+                    </p>
+
+                    <p class="text-lg">
+                        With expertise in modern technologies like React, Next.js, Node.js, and Python, I develop
+                        responsive web applications that provide exceptional user experiences. I also have a strong
+                        background in algorithms and data structures, having solved over 350 programming challenges on
+                        platforms like Codeforces, CodeChef, and LeetCode.
+                    </p>
+
+                    <p class="text-lg">
+                        I'm constantly learning and exploring new technologies to stay at the forefront of the rapidly
+                        evolving tech landscape. I believe in writing clean, maintainable code and following best
+                        practices to create solutions that stand the test of time.
+                    </p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-box">
-                        <div class="stat-item">
-                            <div class="stat-number">2+</div>
-                            <div class="stat-label">Years of Experience</div>
+
+                <div class="grid md:grid-cols-2 gap-8 mt-12">
+                    <div class="bg-white dark:bg-dark-bg p-6 rounded-lg shadow-sm">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 bg-blue-100 dark:bg-blue-900/20 text-primary rounded-lg mb-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">350+</div>
-                            <div class="stat-label">Problems Solved</div>
+                        <h4 class="text-xl font-semibold mb-2">Frontend</h4>
+                        <p class="text-gray-600 dark:text-gray-400">Creating responsive, intuitive user interfaces with
+                            React, Next.js, and modern CSS techniques.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-dark-bg p-6 rounded-lg shadow-sm">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 bg-blue-100 dark:bg-blue-900/20 text-primary rounded-lg mb-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">5+</div>
-                            <div class="stat-label">Projects Completed</div>
+                        <h4 class="text-xl font-semibold mb-2">Backend</h4>
+                        <p class="text-gray-600 dark:text-gray-400">Building robust APIs and server-side applications
+                            with Node.js, Express, and Laravel.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-dark-bg p-6 rounded-lg shadow-sm">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 bg-blue-100 dark:bg-blue-900/20 text-primary rounded-lg mb-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z">
+                                </path>
+                                <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z">
+                                </path>
+                                <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path>
+                            </svg>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">1</div>
-                            <div class="stat-label">Publication</div>
+                        <h4 class="text-xl font-semibold mb-2">Databases</h4>
+                        <p class="text-gray-600 dark:text-gray-400">Designing efficient database schemas and queries
+                            using SQL and NoSQL databases.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-dark-bg p-6 rounded-lg shadow-sm">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 bg-blue-100 dark:bg-blue-900/20 text-primary rounded-lg mb-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Full-Stack</h4>
+                        <p class="text-gray-600 dark:text-gray-400">End-to-end application development from concept to
+                            deployment with modern tech stacks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section
+    <section id="skills" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">EXPERTISE</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mt-2">Skills & Technologies</h3>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Programming Languages</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">JavaScript</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Python</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">C++</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">PHP</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Frontend Technologies</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">React.js</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Next.js</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">HTML/CSS</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Redux</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Backend Technologies</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Node.js</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Express.js</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Laravel</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">RESTful APIs</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Databases & Tools</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">MySQL</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">MS SQL</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Git</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 95%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="font-medium">Firebase</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Skills & Technologies Section -->
+    <section id="skills" class="py-16 bg-white dark:bg-dark-bg text-gray-800 dark:text-dark-text">
+        <div class="container mx-auto px-4">
+            <!-- header -->
+            <div class="text-center mb-12">
+                <h2 class="text-primary uppercase tracking-widest font-medium mb-2">EXPERTISE</h2>
+                <h3 class="text-4xl font-bold">Skills &amp; Technologies</h3>
+            </div>
+
+            <!-- top row: Programming Languages & Frontend -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8 max-w-6xl mx-auto mb-12">
+                <!-- Programming Languages card -->
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-6">
+                    <h4 class="text-2xl font-bold mb-6">Programming Languages</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fab fa-js text-yellow-400 text-4xl mb-2"></i>
+                            <span class="font-medium">JavaScript</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fab fa-python text-blue-500 text-4xl mb-2"></i>
+                            <span class="font-medium">Python</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="devicon-cplusplus-plain colored text-4xl mb-2"></i>
+                            <span class="font-medium">C++</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fab fa-php text-indigo-600 text-4xl mb-2"></i>
+                            <span class="font-medium">PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Technologies card -->
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-6">
+                    <h4 class="text-2xl font-bold mb-6">Frontend Technologies</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fab fa-react text-blue-400 text-4xl mb-2"></i>
+                            <span class="font-medium">React.js</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="devicon-nextjs-original text-4xl mb-2"></i>
+                            <span class="font-medium">Next.js</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fab fa-html5 text-orange-500 text-4xl mb-2"></i>
+                            <span class="font-medium">HTML/CSS</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="devicon-redux-original colored text-4xl mb-2"></i>
+                            <span class="font-medium">Redux</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- bottom row: Backend & Databases -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8 max-w-6xl mx-auto">
+                <!-- Backend Technologies card -->
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-6">
+                    <h4 class="text-2xl font-bold mb-6">Backend Technologies</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fab fa-node-js text-green-600 text-4xl mb-2"></i>
+                            <span class="font-medium">Node.js</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="devicon-express-original text-4xl mb-2"></i>
+                            <span class="font-medium">Express.js</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fab fa-laravel text-red-500 text-4xl mb-2"></i>
+                            <span class="font-medium">Laravel</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fas fa-exchange-alt text-blue-600 text-4xl mb-2"></i>
+                            <span class="font-medium">RESTful APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases & Tools card -->
+                <div class="bg-white dark:bg-dark-card rounded-lg shadow-lg p-6">
+                    <h4 class="text-2xl font-bold mb-6">Databases &amp; Tools</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="devicon-mysql-plain colored text-4xl mb-2"></i>
+                            <span class="font-medium">MySQL</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="devicon-microsoftsqlserver-plain colored text-4xl mb-2"></i>
+                            <span class="font-medium">MS SQL</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="fab fa-git-alt text-orange-600 text-4xl mb-2"></i>
+                            <span class="font-medium">Git</span>
+                        </div>
+                        <div
+                            class="skill-card border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col items-center">
+                            <i class="devicon-firebase-plain colored text-4xl mb-2"></i>
+                            <span class="font-medium">Firebase</span>
                         </div>
                     </div>
                 </div>
@@ -752,103 +628,221 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">C</div>
-                        <div class="skill-item">C++</div>
-                        <div class="skill-item">Python</div>
-                        <div class="skill-item">PHP</div>
-                        <div class="skill-item">JavaScript</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Front-end</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">React.js</div>
-                        <div class="skill-item">Next.js</div>
-                        <div class="skill-item">HTML</div>
-                        <div class="skill-item">CSS</div>
-                        <div class="skill-item">Redux</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Back-end</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">Node.js</div>
-                        <div class="skill-item">Express.js</div>
-                        <div class="skill-item">Laravel</div>
-                        <div class="skill-item">Inertia.js</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">MySQL</div>
-                        <div class="skill-item">MS SQL</div>
-                        <div class="skill-item">Firebase</div>
-                        <div class="skill-item">Oracle</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">Git</div>
-                        <div class="skill-item">GitHub</div>
-                        <div class="skill-item">GitLab</div>
-                        <div class="skill-item">Postman</div>
-                        <div class="skill-item">Thunder Client</div>
-                        <div class="skill-item">VS Code</div>
-                        <div class="skill-item">Xampp</div>
-                        <div class="skill-item">Laragon</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Others</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">RESTful API</div>
-                        <div class="skill-item">ORM</div>
-                        <div class="skill-item">Competitive Programming</div>
-                    </div>
-                </div>
+
+
+    <!-- Additional Skills -->
+    <section id="additional-skills" class="py-16 bg-gray-50 dark:bg-dark-card">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Additional Skills</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">Git</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">RESTful APIs</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">MySQL</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">PostgreSQL</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">Redux</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">Express.js</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">MongoDB</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">TypeScript</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">Firebase</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">Responsive Design</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">CI/CD</span>
+                <span class="px-4 py-2 bg-white dark:bg-dark-bg shadow rounded-full">ORM</span>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">October 2024 - Present</div>
-                    <div class="timeline-role">Software Engineer</div>
-                    <div class="timeline-company">Fair Electronics Ltd. (FEL Samsung)</div>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Developed a Human Resource Management (HRM) system using Next.js, establishing a scalable front-end architecture.</li>
-                            <li>Implemented Redux for efficient state management across complex user interfaces.</li>
-                            <li>Developed and maintained a Dealer Booking system using Laravel (PHP) with Inertia.js and React.</li>
-                            <li>Designed and integrated RESTful APIs using Laravel and Node.js, employing ORM techniques and MySQL for robust back-end data management.</li>
-                            <li>Collaborated with cross-functional teams, utilizing Git (GitHub/GitLab) for version control and Postman/Thunder Client for API testing.</li>
-                            <li>Resolved technical challenges and delivered new features according to client requirements and deadlines.</li>
-                        </ul>
+    <!-- Work Experience -->
+    <section id="work-experience" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Work Experience</h2>
+            <div class="grid gap-8 md:grid-cols-2">
+
+                <div class="bg-white dark:bg-dark-card p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-blue-100 dark:bg-blue-900/20 rounded-full mr-3">
+                            <i class="fas fa-briefcase text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Software Engineer</h3>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 mb-2">Fair Electronics Ltd. (FEL Samsung)</p>
+                    <p class="text-sm text-gray-400 dark:text-gray-500 mb-4">10/2024 – Present | Dhaka, Bangladesh</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>Developed a Human Resource Management (HRM) system using Next.js with scalable architecture.
+                        </li>
+                        <li>Implemented Redux for efficient state management across complex UIs.</li>
+                        <li>Built and maintained a Dealer Booking system using Laravel, Inertia.js, and React.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white dark:bg-dark-card p-6 rounded-lg shadow hover:shadow-lg transition">
+                    <div class="flex items-center mb-4">
+                        <div class="p-3 bg-blue-100 dark:bg-blue-900/20 rounded-full mr-3">
+                            <i class="fas fa-briefcase text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Programmer Intern</h3>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 mb-2">Techno Bangla</p>
+                    <p class="text-sm text-gray-400 dark:text-gray-500 mb-4">03/2024 – 05/2024 | Dhaka, Bangladesh</p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+                        <li>Led development of an Inventory Management System with React, Node.js, and MySQL.</li>
+                        <li>Ensured seamless integration by implementing ORM patterns and Git workflows.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Professional Journey Section -->
+    <section id="journey" class="py-16 bg-gray-50 dark:bg-dark-card">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">PROFESSIONAL JOURNEY</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mt-2">A timeline of my professional experience, education, and
+                    achievements.</h3>
+                <div class="mt-6">
+                    <a href="#resume"
+                        class="inline-flex items-center bg-primary hover:bg-primary/90 text-white py-2 px-6 rounded-md transition">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        Download Full Resume
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Experience Column -->
+                <div>
+                    <div class="flex items-center mb-8">
+                        <div class="flex-shrink-0 p-4 bg-blue-100 dark:bg-blue-900/20 rounded-lg mr-4">
+                            <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                                    clip-rule="evenodd"></path>
+                                <path
+                                    d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold">Experience</h4>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="relative pl-8 timeline-item">
+                            <div
+                                class="absolute left-0 top-0 w-6 h-6 bg-primary rounded-full border-4 border-white dark:border-dark-card timeline-dot">
+                            </div>
+                            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">10/2024 - Present</div>
+                            <h5 class="text-xl font-semibold mb-1">Software Engineer</h5>
+                            <p class="text-primary mb-3">Fair Electronics Ltd. (FEL Samsung)</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 mt-1">
+                                        <div class="h-3 w-3 bg-primary rounded-full"></div>
+                                    </div>
+                                    <p class="ml-3 text-gray-600 dark:text-gray-300">Developed a Human Resource
+                                        Management (HRM) system using Next.js, establishing a scalable front-end
+                                        architecture.</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 mt-1">
+                                        <div class="h-3 w-3 bg-primary rounded-full"></div>
+                                    </div>
+                                    <p class="ml-3 text-gray-600 dark:text-gray-300">Implemented Redux for efficient
+                                        state management across complex user interfaces.</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 mt-1">
+                                        <div class="h-3 w-3 bg-primary rounded-full"></div>
+                                    </div>
+                                    <p class="ml-3 text-gray-600 dark:text-gray-300">Developed and maintained a Dealer
+                                        Booking system using Laravel (PHP) with Inertia.js and React.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="relative pl-8 timeline-item">
+                            <div
+                                class="absolute left-0 top-0 w-6 h-6 bg-primary rounded-full border-4 border-white dark:border-dark-card timeline-dot">
+                            </div>
+                            <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">03/2024 - 05/2024</div>
+                            <h5 class="text-xl font-semibold mb-1">Programmer Intern</h5>
+                            <p class="text-primary mb-3">Techno Bangla</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 mt-1">
+                                        <div class="h-3 w-3 bg-primary rounded-full"></div>
+                                    </div>
+                                    <p class="ml-3 text-gray-600 dark:text-gray-300">Led development of an Inventory
+                                        Management System using React.js (front end), Node.js (back end), and MySQL.</p>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="flex-shrink-0 h-5 w-5 mt-1">
+                                        <div class="h-3 w-3 bg-primary rounded-full"></div>
+                                    </div>
+                                    <p class="ml-3 text-gray-600 dark:text-gray-300">Ensured seamless front-end/back-end
+                                        integration by implementing ORM techniques and leveraging Git for collaborative
+                                        development.</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">March 2024 - May 2024</div>
-                    <div class="timeline-role">Programmer Intern</div>
-                    <div class="timeline-company">Techno Bangla</div>
-                    <div class="timeline-description">
-                        <ul>
-                            <li>Led development of an Inventory Management System using React.js (front end), Node.js (back end), and MySQL.</li>
-                            <li>Ensured seamless front-end/back-end integration by implementing ORM techniques and leveraging Git for collaborative development.</li>
-                        </ul>
+
+                <!-- Education and Publications Column -->
+                <div>
+                    <div class="flex items-center mb-8">
+                        <div class="flex-shrink-0 p-4 bg-blue-100 dark:bg-blue-900/20 rounded-lg mr-4">
+                            <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold">Education</h4>
+                    </div>
+
+                    <div class="relative pl-8 timeline-item mb-12">
+                        <div
+                            class="absolute left-0 top-0 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-dark-card timeline-dot">
+                        </div>
+                        <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">2019 - 2023</div>
+                        <h5 class="text-xl font-semibold mb-1">Bachelor of Science in CSE</h5>
+                        <p class="text-green-500 mb-3">Ahsanullah University of Science and Technology</p>
+                        <p class="text-gray-600 dark:text-gray-300">CGPA 3.383 out of 4.00</p>
+                    </div>
+
+                    <div class="flex items-center mb-8">
+                        <div class="flex-shrink-0 p-4 bg-yellow-100 dark:bg-yellow-900/20 rounded-lg mr-4">
+                            <svg class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h4 class="text-2xl font-bold">Publications</h4>
+                    </div>
+
+                    <div class="relative pl-8 timeline-item">
+                        <div
+                            class="absolute left-0 top-0 w-6 h-6 bg-yellow-500 rounded-full border-4 border-white dark:border-dark-card timeline-dot">
+                        </div>
+                        <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">08/11/2023</div>
+                        <h5 class="text-xl font-semibold mb-1">Diagnosing Chest X-Ray Images of Unseen Style Using
+                            Transfer Learning</h5>
+                        <p class="text-yellow-500 mb-3">IEEE</p>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            This research introduces a new method for diagnosing COVID-19 and pneumonia from chest X-ray
+                            images, prioritizing model generalizability. Utilizing a two-dataset approach, it improves
+                            CNN model performance and emphasizes rigorous out-of-domain testing.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -856,300 +850,443 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-lock"></i>
+    <section id="projects" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">PORTFOLIO</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-primary flex items-center justify-center">
+                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AuthGuard - Email Verification and Reset Password</h3>
-                        <p class="project-description">A React and Node.js based authentication system with MySQL, implementing email verification and password reset via OTPs generated and sent using Nodemailer.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">React.js</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">MySQL</span>
-                            <span class="project-tag">Nodemailer</span>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">AuthGuard - Authentication System</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">A React and Node.js based authentication system
+                            with MySQL, implementing email verification and password reset via OTPs generated and sent
+                            using Nodemailer.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">React</span>
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">Node.js</span>
+                            <span
+                                class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm">MySQL</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-link"></i> Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">GrabOut - Online Restaurant Management System</h3>
-                        <p class="project-description">An online restaurant management system built with HTML, CSS, JavaScript, and PHP, enabling users to view menus, order, and book tables, while granting admins control over all aspects.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">PHP</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-link"></i> Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            View Project
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-gamepad"></i>
+
+                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
+                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z">
+                            </path>
+                        </svg>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">SiTaERa's battleGround - iGraphics Project</h3>
-                        <p class="project-description">This Action-Indie Survival fighting game, developed in C++ with Microsoft Visual Studio, features players battling ten tough monsters across ten devastating scenarios.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">C++</span>
-                            <span class="project-tag">iGraphics</span>
-                            <span class="project-tag">Visual Studio</span>
-                            <span class="project-tag">Game</span>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">GrabOut - Restaurant Management System</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">An online restaurant management system enabling
+                            users to view menus, order, and book tables, while granting admins control over all aspects.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 rounded-full text-sm">HTML/CSS</span>
+                            <span
+                                class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 rounded-full text-sm">JavaScript</span>
+                            <span
+                                class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full text-sm">PHP</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-link"></i> Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-hands-helping"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Expert Assist - Online Service Provider</h3>
-                        <p class="project-description">This website, built with HTML, CSS, JavaScript, and PHP, connects service providers and users in Bangladesh, facilitating expert hiring and seamless payments.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">PHP</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-link"></i> Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            View Project
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-hotel"></i>
+
+                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Hotel Management System</h3>
-                        <p class="project-description">A database-driven hotel management system, developed with NetBeans and Microsoft SQL, ensures customer satisfaction, streamlined service and transaction management for hotel operations.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">NetBeans</span>
-                            <span class="project-tag">MS SQL</span>
-                            <span class="project-tag">Database Design</span>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">SiTaERa's battleGround - iGraphics Game</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">An Action-Indie Survival fighting game,
+                            developed in C++ with Microsoft Visual Studio, featuring players battling ten tough monsters
+                            across ten devastating scenarios.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">C++</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full text-sm">iGraphics</span>
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">Game
+                                Dev</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-link"></i> Demo</a>
-                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        </div>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            View Project
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#"
+                    class="inline-flex items-center justify-center bg-white dark:bg-dark-bg text-primary border-2 border-primary hover:bg-primary hover:text-white transition px-6 py-3 rounded-md font-medium">
+                    View All Projects
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-card">
-                <div class="education-period">2019 - 2023</div>
-                <div class="education-degree">Bachelor of Science (B.Sc) in Computer Science and Engineering</div>
-                <div class="education-institution">Ahsanullah University of Science and Technology</div>
-                <div class="education-details">
-                    <p><strong>CGPA:</strong> 3.383 out of 4.00</p>
-                    <p><strong>Location:</strong> Dhaka, Bangladesh</p>
-                </div>
+    <!-- Competitive Programming Section -->
+    <section id="competitive" class="py-16 bg-gray-50 dark:bg-dark-card">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">PROBLEM SOLVING</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mt-2">Competitive Programming</h3>
+                <p class="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    With over 500 solved problems across various platforms and participation in 30+ contests, I've honed my algorithmic thinking and problem-solving skills.
+                </p>
             </div>
-        </div>
-    </section>
 
-    <!-- Publications Section -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="education-card">
-                <div class="education-period">August 11, 2023</div>
-                <div class="education-degree">Diagnosing Chest X-Ray Images of Unseen Style Using Transfer Learning</div>
-                <div class="education-institution">IEEE - 7th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMIT)</div>
-                <div class="education-details">
-                    <p>This research introduces a new method for diagnosing COVID-19 and pneumonia from chest X-ray images, prioritizing model generalizability. Utilizing a two-dataset approach, it improves CNN model performance and emphasizes rigorous out-of-domain testing.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="md:col-span-1">
+                    <div class="bg-white dark:bg-dark-bg p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-4">Platforms</h4>
+
+                        <div id="platform-list" class="space-y-3">
+                            <div data-platform="codeforces" class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
+                                <div class="flex-shrink-0 mr-3">
+                                    <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">Codeforces</span>
+                            </div>
+
+                            <div data-platform="leetcode" class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
+                                <div class="flex-shrink-0 mr-3">
+                                    <svg class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">LeetCode</span>
+                            </div>
+
+                            <div data-platform="codechef" class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
+                                <div class="flex-shrink-0 mr-3">
+                                    <svg class="h-6 w-6 text-orange-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">CodeChef</span>
+                            </div>
+
+                            <div data-platform="stopstalk" class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
+                                <div class="flex-shrink-0 mr-3">
+                                    <svg class="h-6 w-6 text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"></path>
+                                        <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"></path>
+                                        <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path>
+                                    </svg>
+                                </div>
+                                <span class="font-medium">StopStalk</span>
+                            </div>
+                        </div>
+
+                        <h4 class="text-xl font-semibold mt-8 mb-4">Total Stats</h4>
+
+                        <div class="space-y-3">
+                            <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="text-gray-500 dark:text-gray-400 text-sm">Total Problems</span>
+                                </div>
+                                <span class="text-xl font-bold">500+</span>
+                            </div>
+
+                            <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                                    </svg>
+                                    <span class="text-gray-500 dark:text-gray-400 text-sm">Contests</span>
+                                </div>
+                                <span class="text-xl font-bold">30+</span>
+                            </div>
+
+                            <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <svg class="h-5 w-5 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"></path>
+                                        <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"></path>
+                                        <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path>
+                                    </svg>
+                                    <span class="text-gray-500 dark:text-gray-400 text-sm">Languages Used</span>
+                                </div>
+                                <span class="text-xl font-bold">C++, Python, JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3">
+                    <div class="bg-white dark:bg-dark-bg p-6 rounded-lg shadow-sm mb-6">
+                        <div class="flex items-center mb-4">
+                            <div id="stats-icon" class="p-2 bg-blue-100 dark:bg-blue-900/20 rounded-lg mr-3">
+                                <svg class="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h4 id="stats-title" class="text-xl font-semibold">Codeforces</h4>
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="text-gray-600 dark:text-gray-400 mb-2">Username: <span id="stats-username" class="font-medium">arifulevan08</span></p>
+                            <a id="stats-link" href="https://codeforces.com/profile/arifulevan08" class="text-primary hover:underline" target="_blank">View Profile</a>
+                        </div>
+
+                        <div>
+                            <h5 class="font-medium mb-3">Problems Solved</h5>
+                            <div class="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                <div id="stats-progress" class="h-full bg-primary rounded-full" style="width: 7.5%"></div>
+                            </div>
+                            <div class="flex justify-between mt-1 text-sm text-gray-500 dark:text-gray-400">
+                                <span>0</span>
+                                <span>200+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white dark:bg-dark-bg p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-5">Achievements</h4>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="h-4 w-4 bg-primary rounded-full"></div>
+                                </div>
+                                <p class="ml-3 text-gray-600 dark:text-gray-300">Solved 500+ problems across platforms</p>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="h-4 w-4 bg-primary rounded-full"></div>
+                                </div>
+                                <p class="ml-3 text-gray-600 dark:text-gray-300">Participated in 30+ contests</p>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="h-4 w-4 bg-primary rounded-full"></div>
+                                </div>
+                                <p class="ml-3 text-gray-600 dark:text-gray-300">CodeChef Country Rank: 1350</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">GET IN TOUCH</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mt-2">Let's Connect</h3>
+                <p class="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                    Have a project in mind or want to discuss potential opportunities? I'd love to hear from you.
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-6">Contact Information</h4>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-12 w-12 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mr-4">
+                                    <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">
+                                        </path>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="text-gray-600 dark:text-gray-400">Email</h5>
+                                    <p class="font-medium">md.ariful.evan08@gmail.com</p>
+                                </div>
                             </div>
-                            <div class="contact-text">md.ariful.evan08@gmail.com</div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-12 w-12 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mr-4">
+                                    <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="text-gray-600 dark:text-gray-400">Phone</h5>
+                                    <p class="font-medium">01828986631</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 h-12 w-12 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center mr-4">
+                                    <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h5 class="text-gray-600 dark:text-gray-400">Location</h5>
+                                    <p class="font-medium">Banasree, Dhaka, Bangladesh</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone"></i>
+
+                        <div class="mt-8">
+                            <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
+                            <div class="flex space-x-4">
+                                <a href="#"
+                                    class="h-12 w-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                                        </path>
+                                    </svg>
+                                </a>
+                                <a href="#"
+                                    class="h-12 w-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
+                                    <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z">
+                                        </path>
+                                    </svg>
+                                </a>
                             </div>
-                            <div class="contact-text">01828986631</div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">Banasree, Dhaka, Bangladesh</div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-calendar"></i>
-                            </div>
-                            <div class="contact-text">08/11/2000</div>
                         </div>
                     </div>
-                    <h3>Social Profiles</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fas fa-code"></i>
-                        </a>
+
+                    <div>
+                        <h4 class="text-xl font-semibold mb-6">Send me a message</h4>
+
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Name</label>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-dark-bg text-base"
+                                    placeholder="Your name">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-dark-bg text-base"
+                                    placeholder="your.email@example.com">
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="subject" class="block text-gray-700 dark:text-gray-300 mb-2">Subject</label>
+                                <input type="text" id="subject"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-dark-bg text-base"
+                                    placeholder="Project inquiry">
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
+                                <textarea id="message" rows="5"
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-dark-bg text-base"
+                                    placeholder="Your message here..."></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-4 rounded-md flex items-center justify-center transition">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                </svg>
+                                Send Message
+                            </button>
+                        </form>
                     </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label class="form-label">Name</label>
-                            <input type="text" class="form-control" placeholder="Enter your name">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-control" placeholder="Enter your email">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Subject</label>
-                            <input type="text" class="form-control" placeholder="Enter subject">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Message</label>
-                            <textarea class="form-control" placeholder="Enter your message"></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Competitive Programming Section -->
-    <section id="competitive" class="skills">
-        <div class="container">
-            <h2 class="section-title">Competitive Programming</h2>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Platforms</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">CodeChef</div>
-                        <div class="skill-item">Codeforces</div>
-                        <div class="skill-item">LeetCode</div>
-                        <div class="skill-item">StopStalk</div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Achievements</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">350+ Problems Solved</div>
-                        <div class="skill-item">Data Structures</div>
-                        <div class="skill-item">Algorithms</div>
-                        <div class="skill-item">Problem Solving</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Resume Section -->
+    <section id="resume" class="py-16 bg-gray-50 dark:bg-dark-card hidden">
+        <!-- This section would contain resume content but is hidden for now -->
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-nav">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-            </div>
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-codepen"></i></a>
-            </div>
-            <div class="footer-text">
-                <p>Available for freelance work and full-time opportunities</p>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Md. Ariful Islam Evan. All rights reserved.</p>
-            </div>
+    <footer class="bg-gray-900 text-gray-300 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Md. Ariful Islam Evan. All rights reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu after clicking a link
-                if (window.innerWidth <= 768) {
-                    navLinks.style.display = 'none';
-                }
-            });
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            } else {
-                header.style.boxShadow = 'none';
-            }
-        });
-    </script>
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top text-white p-3 rounded-full transition">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </a>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
