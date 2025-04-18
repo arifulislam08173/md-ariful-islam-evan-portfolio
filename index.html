@@ -93,6 +93,7 @@
                     </svg>
                 </button>
             </div>
+            
 
             <div id="mobile-menu" class="md:hidden hidden mt-2 py-2 bg-white dark:bg-dark-card rounded-lg shadow-lg">
                 <a href="#home"
@@ -702,7 +703,7 @@
                 <h3 class="text-3xl md:text-4xl font-bold mt-2">A timeline of my professional experience, education, and
                     achievements.</h3>
                 <div class="mt-6">
-                    <a href="#resume"
+                    <a href="./pdf/Md._Ariful_Islam_Evan.pdf" target="_blank" rel="noopener noreferrer" 
                         class="inline-flex items-center bg-primary hover:bg-primary/90 text-white py-2 px-6 rounded-md transition">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -815,8 +816,29 @@
                         <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">2019 - 2023</div>
                         <h5 class="text-xl font-semibold mb-1">Bachelor of Science in CSE</h5>
                         <p class="text-green-500 mb-3">Ahsanullah University of Science and Technology</p>
-                        <p class="text-gray-600 dark:text-gray-300">CGPA 3.383 out of 4.00</p>
+                        <!-- <p class="text-gray-600 dark:text-gray-300">CGPA 3.383 out of 4.00</p> -->
                     </div>
+
+                     <!-- Higher Secondary Certificate -->
+                     <div class="relative pl-8 timeline-item mb-12">
+                        <div
+                            class="absolute left-0 top-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white dark:border-dark-card timeline-dot">
+                        </div>
+                        <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+                        <h5 class="text-xl font-semibold mb-1">Higher Secondary Certificate (2018)</h5></div>
+                        <p class="text-blue-500 mb-3">Govt. Sayed Hatem Ali College</p>
+                    </div>
+
+                    <!-- Secondary School Certificate -->
+                    <div class="relative pl-8 timeline-item mb-12">
+                        <div
+                            class="absolute left-0 top-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white dark:border-dark-card timeline-dot">
+                        </div>
+                        <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
+                        <h5 class="text-xl font-semibold mb-1">Secondary School Certificate (2016)</h5></div>
+                        <p class="text-blue-500 mb-3">Barishal Zilla School</p>
+                    </div>
+
 
                     <div class="flex items-center mb-8">
                         <div class="flex-shrink-0 p-4 bg-yellow-100 dark:bg-yellow-900/20 rounded-lg mr-4">
@@ -850,7 +872,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16">
+    <!-- <section id="projects" class="py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
                 <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">PORTFOLIO</h2>
@@ -971,7 +993,247 @@
                 </a>
             </div>
         </div>
+    </section> -->
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">PORTFOLIO</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AuthGuard -->
+                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-primary flex items-center justify-center">
+                        <!-- existing shield/check icon -->
+                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">AuthGuard - Authentication System</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            A React and Node.js based authentication system with MySQL, implementing email verification
+                            and
+                            password reset via OTPs generated and sent using Nodemailer.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">React</span>
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">Node.js</span>
+                            <span
+                                class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm">MySQL</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            View Project
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- GrabOut -->
+                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
+                        <!-- existing users icon -->
+                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">GrabOut - Restaurant Management System</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            An online restaurant management system enabling users to view menus, order, and book tables,
+                            while granting admins control over all aspects.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 rounded-full text-sm">HTML/CSS</span>
+                            <span
+                                class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 rounded-full text-sm">JavaScript</span>
+                            <span
+                                class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full text-sm">PHP</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            View Project
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- HR Management System -->
+                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
+                    <!-- you can swap this icon for any that fits -->
+                    <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 3a2 2 0 00-2 2v2a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm0 6a2 2 0 00-2 2v3h16v-3a2 2 0 00-2-2H4z"/>
+                    </svg>
+                    </div>
+                    <div class="p-6">
+                    <h4 class="text-xl font-semibold mb-2">HR Management System</h4>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        An intuitive HR portal that empowers admins to manage employee records, attendance, leave and allowance approvals, while giving staff a seamless self‑service experience for profile viewing and request submissions.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">Next.js</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                        View Project
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </a>
+                    </div>
+                </div>
+  
+
+                <!-- SiTaERa's battleGround -->
+                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                        <!-- existing game icon -->
+                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">SiTaERa's battleGround - iGraphics Game</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            An Action‑Indie Survival fighting game, developed in C++ with Microsoft Visual Studio,
+                            featuring
+                            players battling ten tough monsters across ten devastating scenarios.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">C++</span>
+                            <span
+                                class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full text-sm">iGraphics</span>
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">Game
+                                Dev</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            View Project
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NEW: Expert Assist -->
+                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
+                        <!-- globe icon placeholder -->
+                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm0-1a7 7 0 100-14 7 7 0 000 14zm0-4a4 4 0 100-8 4 4 0 000 8z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Expert Assist, Online Service Provider</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            This website, built with HTML, CSS, JavaScript, and PHP, connects service providers and
+                            users in
+                            Bangladesh, facilitating expert hiring and seamless payments.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">HTML/CSS</span>
+                            <span
+                                class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 rounded-full text-sm">JavaScript</span>
+                            <span
+                                class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm">PHP</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            View Project
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NEW: Hotel Management System -->
+                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center">
+                        <!-- bed icon placeholder -->
+                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3 7v6a1 1 0 001 1h12a1 1 0 001-1V7H3zM2 13v1h16v-1a1 1 0 00-1-1h-1V8a2 2 0 00-2-2H5a2 2 0 00-2 2v4H2z" />
+                        </svg>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Hotel Management System</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            A database‑driven hotel management system, developed with NetBeans and Microsoft SQL,
+                            ensures
+                            customer satisfaction, streamlined service and transaction management for hotel operations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full text-sm">NetBeans</span>
+                            <span
+                                class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">MS
+                                SQL</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                            View Project
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- keep your View All / Show More button here -->
+            <div class="text-center mt-10">
+                <button id="view-all-btn"
+                    class="inline-flex items-center justify-center bg-white dark:bg-dark-bg text-primary border-2 border-primary hover:bg-primary hover:text-white transition px-6 py-3 rounded-md font-medium">
+                    View All Projects
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </section>
+
+
 
     <!-- Competitive Programming Section -->
     <section id="competitive" class="py-16 bg-gray-50 dark:bg-dark-card">
@@ -980,7 +1242,8 @@
                 <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">PROBLEM SOLVING</h2>
                 <h3 class="text-3xl md:text-4xl font-bold mt-2">Competitive Programming</h3>
                 <p class="mt-4 text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                    With over 500 solved problems across various platforms and participation in 30+ contests, I've honed my algorithmic thinking and problem-solving skills.
+                    With over 500 solved problems across various platforms and participation in 30+ contests, I've honed
+                    my algorithmic thinking and problem-solving skills.
                 </p>
             </div>
 
@@ -990,38 +1253,56 @@
                         <h4 class="text-xl font-semibold mb-4">Platforms</h4>
 
                         <div id="platform-list" class="space-y-3">
-                            <div data-platform="codeforces" class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
+                            <div data-platform="codeforces"
+                                class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
                                 <div class="flex-shrink-0 mr-3">
-                                    <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    <svg class="h-6 w-6 text-primary" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
                                     </svg>
                                 </div>
                                 <span class="font-medium">Codeforces</span>
                             </div>
 
-                            <div data-platform="leetcode" class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
+                            <div data-platform="leetcode"
+                                class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
                                 <div class="flex-shrink-0 mr-3">
-                                    <svg class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+                                    <svg class="h-6 w-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                                            clip-rule="evenodd"></path>
                                     </svg>
                                 </div>
                                 <span class="font-medium">LeetCode</span>
                             </div>
 
-                            <div data-platform="codechef" class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
+                            <div data-platform="codechef"
+                                class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
                                 <div class="flex-shrink-0 mr-3">
-                                    <svg class="h-6 w-6 text-orange-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                                    <svg class="h-6 w-6 text-orange-500" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z">
+                                        </path>
                                     </svg>
                                 </div>
                                 <span class="font-medium">CodeChef</span>
                             </div>
 
-                            <div data-platform="stopstalk" class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
+                            <div data-platform="stopstalk"
+                                class="platform-item p-4 rounded-lg flex items-center cursor-pointer hover:bg-blue-50 dark:hover:bg-blue-900/20 transition">
                                 <div class="flex-shrink-0 mr-3">
-                                    <svg class="h-6 w-6 text-purple-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"></path>
-                                        <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"></path>
+                                    <svg class="h-6 w-6 text-purple-500" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z">
+                                        </path>
+                                        <path
+                                            d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z">
+                                        </path>
                                         <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path>
                                     </svg>
                                 </div>
@@ -1034,9 +1315,12 @@
                         <div class="space-y-3">
                             <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
                                 <div class="flex items-center mb-2">
-                                    <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="h-5 w-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
                                         <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
-                                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+                                        <path fill-rule="evenodd"
+                                            d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                                            clip-rule="evenodd"></path>
                                     </svg>
                                     <span class="text-gray-500 dark:text-gray-400 text-sm">Total Problems</span>
                                 </div>
@@ -1045,8 +1329,11 @@
 
                             <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
                                 <div class="flex items-center mb-2">
-                                    <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                                    <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z">
+                                        </path>
                                     </svg>
                                     <span class="text-gray-500 dark:text-gray-400 text-sm">Contests</span>
                                 </div>
@@ -1055,9 +1342,14 @@
 
                             <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
                                 <div class="flex items-center mb-2">
-                                    <svg class="h-5 w-5 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z"></path>
-                                        <path d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z"></path>
+                                    <svg class="h-5 w-5 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M3 12v3c0 1.657 3.134 3 7 3s7-1.343 7-3v-3c0 1.657-3.134 3-7 3s-7-1.343-7-3z">
+                                        </path>
+                                        <path
+                                            d="M3 7v3c0 1.657 3.134 3 7 3s7-1.343 7-3V7c0 1.657-3.134 3-7 3S3 8.657 3 7z">
+                                        </path>
                                         <path d="M17 5c0 1.657-3.134 3-7 3S3 6.657 3 5s3.134-3 7-3 7 1.343 7 3z"></path>
                                     </svg>
                                     <span class="text-gray-500 dark:text-gray-400 text-sm">Languages Used</span>
@@ -1072,22 +1364,28 @@
                     <div class="bg-white dark:bg-dark-bg p-6 rounded-lg shadow-sm mb-6">
                         <div class="flex items-center mb-4">
                             <div id="stats-icon" class="p-2 bg-blue-100 dark:bg-blue-900/20 rounded-lg mr-3">
-                                <svg class="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                <svg class="h-5 w-5 text-primary" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
                                 </svg>
                             </div>
                             <h4 id="stats-title" class="text-xl font-semibold">Codeforces</h4>
                         </div>
 
                         <div class="mb-4">
-                            <p class="text-gray-600 dark:text-gray-400 mb-2">Username: <span id="stats-username" class="font-medium">arifulevan08</span></p>
-                            <a id="stats-link" href="https://codeforces.com/profile/arifulevan08" class="text-primary hover:underline" target="_blank">View Profile</a>
+                            <p class="text-gray-600 dark:text-gray-400 mb-2">Username: <span id="stats-username"
+                                    class="font-medium">arifulevan08</span></p>
+                            <a id="stats-link" href="https://codeforces.com/profile/arifulevan08"
+                                class="text-primary hover:underline" target="_blank">View Profile</a>
                         </div>
 
                         <div>
                             <h5 class="font-medium mb-3">Problems Solved</h5>
                             <div class="h-2 w-full bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                                <div id="stats-progress" class="h-full bg-primary rounded-full" style="width: 7.5%"></div>
+                                <div id="stats-progress" class="h-full bg-primary rounded-full" style="width: 7.5%">
+                                </div>
                             </div>
                             <div class="flex justify-between mt-1 text-sm text-gray-500 dark:text-gray-400">
                                 <span>0</span>
@@ -1104,7 +1402,8 @@
                                 <div class="flex-shrink-0 mt-1">
                                     <div class="h-4 w-4 bg-primary rounded-full"></div>
                                 </div>
-                                <p class="ml-3 text-gray-600 dark:text-gray-300">Solved 500+ problems across platforms</p>
+                                <p class="ml-3 text-gray-600 dark:text-gray-300">Solved 500+ problems across platforms
+                                </p>
                             </div>
 
                             <div class="flex items-start">

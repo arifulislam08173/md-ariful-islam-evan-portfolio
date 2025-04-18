@@ -193,7 +193,7 @@ html {
   margin-bottom: 1.5rem;
   /* reset any other color you want here */
 }
-#skills h4::after {
+/* #skills h4::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -203,7 +203,7 @@ html {
   height: 5px;
   background-color: #5D5CDE;
   border-radius: 2px;
-}
+} */
 
  /* SKILLS & TECHNOLOGIES CARDS */
 #skills .skill-card {
