@@ -2,8 +2,12 @@
 
 html {
     scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-
+body, nav, section, footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
 .timeline-item::before {
     content: '';
     position: absolute;
@@ -278,4 +282,29 @@ html {
 .platform-item {
     transition: all 0.2s ease;
 }
+
+
+
+.profile-image-glow {
+    position: relative;
+  }
+  .profile-image-glow::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    background: linear-gradient(45deg, #5D5CDE, #3B82F6);
+    border-radius: 50%;
+    filter: blur(15px);
+    opacity: 0.5;
+    z-index: -1;
+  }
+  
+  @keyframes pulse-ring {
+    0%   { transform: scale(0.95); opacity: 0.7; }
+    50%  { transform: scale(1);    opacity: 0.5; }
+    100% { transform: scale(0.95); opacity: 0.7; }
+  }
+  .pulse-ring {
+    animation: pulse-ring 3s ease-in-out infinite;
+  }
   

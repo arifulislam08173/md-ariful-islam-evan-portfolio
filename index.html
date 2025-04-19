@@ -27,6 +27,7 @@
                     },
                     animation: {
                         float: 'float 3s ease-in-out infinite',
+                        'spin-slow': 'spin 12s linear infinite',
                     },
                     keyframes: {
                         float: {
@@ -63,38 +64,55 @@
     <nav class="sticky top-0 z-50 bg-white dark:bg-dark-bg shadow-md">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
+                <!-- logo -->
                 <a href="#home" class="flex items-center space-x-2">
-                    <span class="text-primary font-semibold text-xl">Evan<span
-                            class="text-black dark:text-white">Portfolio</span></span>
+                    <span class="text-primary font-semibold text-xl">
+                        <!-- Evan<span class="text-black dark:text-white">Portfolio</span> -->
+                        Md. Ariful Islam <span class="text-black dark:text-white">Evan</span>
+                    </span>
                 </a>
 
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home"
-                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Home</a>
-                    <a href="#about"
-                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">About</a>
-                    <a href="#skills"
-                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Skills</a>
+                <!-- DESKTOP NAV: links + theme toggle-->
+                <div class="hidden md:flex items-center space-x-8">
+                    <!-- your seven links -->
+                    <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-primary transition">Home</a>
+                    <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-primary transition">About</a>
+                    <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-primary transition">Skills</a>
                     <a href="#projects"
-                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Projects</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary transition">Projects</a>
                     <a href="#competitive"
-                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Competitions</a>
-                    <a href="#journey"
-                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Resume</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary transition">Competitions</a>
+                    <a href="#journey" class="text-gray-600 dark:text-gray-300 hover:text-primary transition">Resume</a>
                     <a href="#contact"
-                        class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition">Contact</a>
+                        class="text-gray-600 dark:text-gray-300 hover:text-primary transition">Contact</a>
+
+                    <!-- desktop theme‑toggle button-->
+                    <button id="theme-toggle"
+                        class="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                        <i id="theme-icon" class="fas fa-moon"></i>
+                    </button>
                 </div>
 
-                <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-            
+                <!-- MOBILE NAV: theme‑toggle + hamburger -->
+                <div class="flex md:hidden items-center space-x-4">
+                    <!-- mobile theme‑toggle -->
+                    <button id="theme-toggle-mobile"
+                        class="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+                        <i id="theme-icon-mobile" class="fas fa-moon"></i>
+                    </button>
 
+                    <!-- hamburger -->
+                    <button id="mobile-menu-button" class="text-gray-600 dark:text-gray-300 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- mobile menu links -->
             <div id="mobile-menu" class="md:hidden hidden mt-2 py-2 bg-white dark:bg-dark-card rounded-lg shadow-lg">
                 <a href="#home"
                     class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
@@ -102,22 +120,25 @@
                     class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
                 <a href="#skills"
                     class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Skills</a>
-                <a href="#journey"
+                <a href="#projects"
                     class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Projects</a>
                 <a href="#competitive"
                     class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Competitions</a>
-                <a href="#resume"
+                <a href="#journey"
                     class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Resume</a>
                 <a href="#contact"
                     class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
             </div>
+
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="py-16 md:py-24">
         <div class="container mx-auto px-4 md:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="flex flex-col md:flex-row md:items-start items-center justify-between">
+
+                <!-- Left: Text -->
                 <div class="w-full md:w-1/2 mb-10 md:mb-0">
                     <div class="bg-blue-50 dark:bg-primary/10 py-2 px-4 rounded-full inline-block mb-4">
                         <span class="text-primary text-sm font-medium">• Software Engineer</span>
@@ -128,89 +149,62 @@
                     </h1>
 
                     <p class="text-gray-600 dark:text-gray-400 mb-8 text-lg">
-                        <!-- Full-stack developer with expertise in JavaScript, React, Next.js, Node.js, Python, and C++.
-                        Passionate about creating clean, efficient, and high-performance applications. -->
                         Results‑driven Software Engineer with expertise in JavaScript, React, Next.js, Node.js, Python,
-                        and C++;
-                        a proven track record of leading full‑stack projects and solving 350+ algorithmic challenges.
-                        Passionate about continuous learning, cross‑functional collaboration, and building clean,
-                        efficient, scalable high‑performance applications.
+                        and C++; a proven track record of leading full‑stack projects and solving 350+ algorithmic
+                        challenges.
                     </p>
 
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#journey"
                             class="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-md flex items-center justify-center transition">
                             View Projects
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20"
-                                fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="currentColor"
+                                viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
                                     d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
                                     clip-rule="evenodd" />
                             </svg>
                         </a>
-
                         <a href="#contact"
-                            class="border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-medium px-6 py-3 rounded-md flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 transition">
+                            class="border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-medium
+                          px-6 py-3 rounded-md flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800 transition">
                             Contact Me
                         </a>
                     </div>
                 </div>
 
-                <!-- <div class="w-full md:w-5/12 code-block-container">
-                    <div class="code-block-header">
-                        <div class="window-button btn-red"></div>
-                        <div class="window-button btn-yellow"></div>
-                        <div class="window-button btn-green"></div>
-                        <div class="ml-auto text-white text-xs">C++</div>
-                    </div>
-                    <div class="code-content" id="typewriter">
-                        #include <iostream>
-                            #include <vector>
-                                #include <string>
-
-                                    class Developer {
-                                    private:
-                                    std::string name = "Md. Ariful Islam Evan";
-                                    std::string role = "Software Engineer";
-                                    std::vector<std::string> languages = {"C++", "JavaScript", "Python"};
-                                        int experience = 2;
-
-                                        public:
-                                        std::string getInfo() {
-                                        return "Building elegant solutions";
-                                        }
-
-                                        void solveProblems() {
-                                        // Creating innovative solutions
-                                        // Writing clean, efficient code
-                                        // Building robust applications
-                                        }
-
-                                        bool isLearning() {
-                                        return true; // Always learning!
-                                        }
-                                        };
-                    </div>
-                </div> -->
-
-                <div class="w-full md:w-5/12 relative">
-                    <div class="code-block p-6">
-                        <!-- header stays the same -->
-                        <div class="code-block-header">
-                            <div class="window-button btn-red"></div>
-                            <div class="window-button btn-yellow"></div>
-                            <div class="window-button btn-green"></div>
-                            <div class="ml-auto text-white text-xs">JavaScript</div>
+                <!-- Right: Photo + Code -->
+                <div class="w-full md:w-5/12 flex flex-col items-center">
+                    <!-- Profile Image with Glow + Pulse Ring -->
+                    <div class="mb-8 relative profile-image-glow">
+                        <div
+                            class="w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+                            <img src="./image/Md. Ariful Islam Evan.jpg" alt="Md. Ariful Islam Evan"
+                                class="w-full h-full object-cover" />
                         </div>
-                        <!-- this is where we’ll type -->
-                        <div class="pt-4 text-sm sm:text-base font-mono code-content" id="codeTypewriter"></div>
+                        <div class="absolute -inset-3 rounded-full border-2 border-dashed border-primary/60 pulse-ring">
+                        </div>
                     </div>
-                    <!-- skewed background behind -->
-                    <div class="code-bg"></div>
+
+                    <!-- Code Block + Skewed Background -->
+                    <div class="relative w-full">
+                        <div class="code-block p-6 w-full h-40 overflow-hidden">
+                            <div class="code-block-header">
+                                <div class="window-button btn-red"></div>
+                                <div class="window-button btn-yellow"></div>
+                                <div class="window-button btn-green"></div>
+                                <div class="ml-auto text-white text-xs">JavaScript</div>
+                            </div>
+                            <div class="pt-4 text-sm sm:text-base font-mono code-content" id="codeTypewriter"></div>
+                        </div>
+                        <div class="code-bg w-full"></div>
+                    </div>
                 </div>
 
             </div>
+        </div>
     </section>
+
 
     <!-- About Section -->
     <section id="about" class="py-16 bg-gray-50 dark:bg-dark-card">
@@ -309,200 +303,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Skills Section
-    <section id="skills" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">EXPERTISE</h2>
-                <h3 class="text-3xl md:text-4xl font-bold mt-2">Skills & Technologies</h3>
-            </div>
-
-            <div class="max-w-4xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h4 class="text-xl font-semibold mb-4">Programming Languages</h4>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">JavaScript</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">Python</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 85%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">C++</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">PHP</span>
-                                    <span>75%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 75%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xl font-semibold mb-4">Frontend Technologies</h4>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">React.js</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 95%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">Next.js</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">HTML/CSS</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 95%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">Redux</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xl font-semibold mb-4">Backend Technologies</h4>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">Node.js</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">Express.js</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 85%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">Laravel</span>
-                                    <span>80%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 80%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">RESTful APIs</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 90%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h4 class="text-xl font-semibold mb-4">Databases & Tools</h4>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">MySQL</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 90%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">MS SQL</span>
-                                    <span>80%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 80%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">Git</span>
-                                    <span>95%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 95%"></div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="flex justify-between mb-1">
-                                    <span class="font-medium">Firebase</span>
-                                    <span>75%</span>
-                                </div>
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: 75%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- Skills & Technologies Section -->
     <section id="skills" class="py-16 bg-white dark:bg-dark-bg text-gray-800 dark:text-dark-text">
@@ -703,7 +503,7 @@
                 <h3 class="text-3xl md:text-4xl font-bold mt-2">A timeline of my professional experience, education, and
                     achievements.</h3>
                 <div class="mt-6">
-                    <a href="./pdf/Md._Ariful_Islam_Evan.pdf" target="_blank" rel="noopener noreferrer" 
+                    <a href="./pdf/Md._Ariful_Islam_Evan.pdf" target="_blank" rel="noopener noreferrer"
                         class="inline-flex items-center bg-primary hover:bg-primary/90 text-white py-2 px-6 rounded-md transition">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -819,13 +619,14 @@
                         <!-- <p class="text-gray-600 dark:text-gray-300">CGPA 3.383 out of 4.00</p> -->
                     </div>
 
-                     <!-- Higher Secondary Certificate -->
-                     <div class="relative pl-8 timeline-item mb-12">
+                    <!-- Higher Secondary Certificate -->
+                    <div class="relative pl-8 timeline-item mb-12">
                         <div
                             class="absolute left-0 top-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white dark:border-dark-card timeline-dot">
                         </div>
                         <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
-                        <h5 class="text-xl font-semibold mb-1">Higher Secondary Certificate (2018)</h5></div>
+                            <h5 class="text-xl font-semibold mb-1">Higher Secondary Certificate (2018)</h5>
+                        </div>
                         <p class="text-blue-500 mb-3">Govt. Sayed Hatem Ali College</p>
                     </div>
 
@@ -835,7 +636,8 @@
                             class="absolute left-0 top-0 w-6 h-6 bg-blue-500 rounded-full border-4 border-white dark:border-dark-card timeline-dot">
                         </div>
                         <div class="mb-1 text-sm text-gray-500 dark:text-gray-400">
-                        <h5 class="text-xl font-semibold mb-1">Secondary School Certificate (2016)</h5></div>
+                            <h5 class="text-xl font-semibold mb-1">Secondary School Certificate (2016)</h5>
+                        </div>
                         <p class="text-blue-500 mb-3">Barishal Zilla School</p>
                     </div>
 
@@ -872,131 +674,6 @@
     </section>
 
     <!-- Projects Section -->
-    <!-- <section id="projects" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-sm font-semibold text-primary uppercase tracking-wide">PORTFOLIO</h2>
-                <h3 class="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h3>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-blue-500 to-primary flex items-center justify-center">
-                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-2">AuthGuard - Authentication System</h4>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">A React and Node.js based authentication system
-                            with MySQL, implementing email verification and password reset via OTPs generated and sent
-                            using Nodemailer.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">React</span>
-                            <span
-                                class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">Node.js</span>
-                            <span
-                                class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm">MySQL</span>
-                        </div>
-                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
-                            View Project
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center">
-                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z">
-                            </path>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-2">GrabOut - Restaurant Management System</h4>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">An online restaurant management system enabling
-                            users to view menus, order, and book tables, while granting admins control over all aspects.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="px-3 py-1 bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300 rounded-full text-sm">HTML/CSS</span>
-                            <span
-                                class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 rounded-full text-sm">JavaScript</span>
-                            <span
-                                class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full text-sm">PHP</span>
-                        </div>
-                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
-                            View Project
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
-                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
-                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-semibold mb-2">SiTaERa's battleGround - iGraphics Game</h4>
-                        <p class="text-gray-600 dark:text-gray-400 mb-4">An Action-Indie Survival fighting game,
-                            developed in C++ with Microsoft Visual Studio, featuring players battling ten tough monsters
-                            across ten devastating scenarios.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span
-                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">C++</span>
-                            <span
-                                class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full text-sm">iGraphics</span>
-                            <span
-                                class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">Game
-                                Dev</span>
-                        </div>
-                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
-                            View Project
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-10">
-                <a href="#"
-                    class="inline-flex items-center justify-center bg-white dark:bg-dark-bg text-primary border-2 border-primary hover:bg-primary hover:text-white transition px-6 py-3 rounded-md font-medium">
-                    View All Projects
-                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </section> -->
-
-
-    <!-- Projects Section -->
     <section id="projects" class="py-16">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
@@ -1031,14 +708,18 @@
                             <span
                                 class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm">MySQL</span>
                         </div>
-                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
-                            View Project
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
+                        <div class="flex items-center space-x-6">
+                            <!-- GitHub link -->
+                            <a href="https://github.com/arifulislam08173/emailverification" target="_blank"
+                                class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                <svg class="ml-0 mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 .5C5.38.5 0 5.88 0 12.5c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.2.8-.6v-2.1c-3.34.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.5.8 1.5.8 1 .1 1.5-.7 1.5-.7.2-.7.5-1.1.8-1.3-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3 0 0 1-.3 3.3 1.2.9-.3 1.9-.5 2.9-.5s2 .2 2.9.5c2.3-1.6 3.3-1.2 3.3-1.2.6 1.5.2 2.7.1 3 .8.9 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .5.4.8 1 .8 2v2.9c0 .4.2.7.8.6C20.6 22.3 24 17.8 24 12.5 24 5.88 18.62.5 12 .5z" />
+                                </svg>
+                                View Project
+                            </a>
+                        </div>
+
                     </div>
                 </div>
 
@@ -1067,14 +748,17 @@
                             <span
                                 class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-800 dark:text-indigo-300 rounded-full text-sm">PHP</span>
                         </div>
-                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
-                            View Project
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
+                        <div class="flex items-center space-x-6">
+                            <!-- GitHub link -->
+                            <a href="https://github.com/arifulislam08173/GrabOut" target="_blank"
+                                class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                <svg class="ml-0 mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 .5C5.38.5 0 5.88 0 12.5c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.2.8-.6v-2.1c-3.34.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.5.8 1.5.8 1 .1 1.5-.7 1.5-.7.2-.7.5-1.1.8-1.3-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3 0 0 1-.3 3.3 1.2.9-.3 1.9-.5 2.9-.5s2 .2 2.9.5c2.3-1.6 3.3-1.2 3.3-1.2.6 1.5.2 2.7.1 3 .8.9 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .5.4.8 1 .8 2v2.9c0 .4.2.7.8.6C20.6 22.3 24 17.8 24 12.5 24 5.88 18.62.5 12 .5z" />
+                                </svg>
+                                View Project
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -1082,30 +766,38 @@
                 <!-- HR Management System -->
                 <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
                     <div class="h-48 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
-                    <!-- you can swap this icon for any that fits -->
-                    <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 3a2 2 0 00-2 2v2a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm0 6a2 2 0 00-2 2v3h16v-3a2 2 0 00-2-2H4z"/>
-                    </svg>
+                        <!-- you can swap this icon for any that fits -->
+                        <svg class="h-16 w-16 text-white" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4 3a2 2 0 00-2 2v2a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm0 6a2 2 0 00-2 2v3h16v-3a2 2 0 00-2-2H4z" />
+                        </svg>
                     </div>
                     <div class="p-6">
-                    <h4 class="text-xl font-semibold mb-2">HR Management System</h4>
-                    <p class="text-gray-600 dark:text-gray-400 mb-4">
-                        An intuitive HR portal that empowers admins to manage employee records, attendance, leave and allowance approvals, while giving staff a seamless self‑service experience for profile viewing and request submissions.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">Next.js</span>
-                    </div>
-                    <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
-                        View Project
-                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                        </svg>
-                    </a>
+                        <h4 class="text-xl font-semibold mb-2">HR Management System</h4>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            An intuitive HR portal that empowers admins to manage employee records, attendance, leave
+                            and allowance approvals, while giving staff a seamless self‑service experience for profile
+                            viewing and request submissions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm">Next.js</span>
+                        </div>
+                        <div class="flex items-center space-x-6">
+                            <!-- GitHub link -->
+                            <a href="https://github.com/arifulislam08173/HR-Management-Front" target="_blank"
+                                class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                <svg class="ml-0 mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 .5C5.38.5 0 5.88 0 12.5c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.2.8-.6v-2.1c-3.34.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.5.8 1.5.8 1 .1 1.5-.7 1.5-.7.2-.7.5-1.1.8-1.3-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3 0 0 1-.3 3.3 1.2.9-.3 1.9-.5 2.9-.5s2 .2 2.9.5c2.3-1.6 3.3-1.2 3.3-1.2.6 1.5.2 2.7.1 3 .8.9 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .5.4.8 1 .8 2v2.9c0 .4.2.7.8.6C20.6 22.3 24 17.8 24 12.5 24 5.88 18.62.5 12 .5z" />
+                                </svg>
+                                View Project
+                            </a>
+                        </div>
                     </div>
                 </div>
-  
+
 
                 <!-- SiTaERa's battleGround -->
                 <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
@@ -1134,18 +826,29 @@
                                 class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">Game
                                 Dev</span>
                         </div>
-                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
-                            View Project
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
+                        <div class="flex items-center space-x-6">
+                            <!-- GitHub link -->
+                            <a href="https://github.com/arifulislam08173/My-First-games-SiTaERa-s-Battleground--IGRAPHICS-project"
+                                target="_blank"
+                                class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                <svg class="ml-0 mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 .5C5.38.5 0 5.88 0 12.5c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.2.8-.6v-2.1c-3.34.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.5.8 1.5.8 1 .1 1.5-.7 1.5-.7.2-.7.5-1.1.8-1.3-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3 0 0 1-.3 3.3 1.2.9-.3 1.9-.5 2.9-.5s2 .2 2.9.5c2.3-1.6 3.3-1.2 3.3-1.2.6 1.5.2 2.7.1 3 .8.9 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .5.4.8 1 .8 2v2.9c0 .4.2.7.8.6C20.6 22.3 24 17.8 24 12.5 24 5.88 18.62.5 12 .5z" />
+                                </svg>
+                                View Project
+                            </a>
+
+                            <!-- YouTube link -->
+                            <a href="https://youtu.be/VbWyjb-r-Lg?si=kcMgYMFfSchX-3Fs" target="_blank"
+                                class="inline-flex items-center text-red-600 hover:text-red-700 font-medium">
+                                <i class="fab fa-youtube mr-2 text-xl"></i>
+                                Watch Video
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- NEW: Expert Assist -->
+                <!-- Expert Assist -->
                 <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
                     <div class="h-48 bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center">
                         <!-- globe icon placeholder -->
@@ -1171,18 +874,22 @@
                             <span
                                 class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-full text-sm">PHP</span>
                         </div>
-                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
-                            View Project
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
+
+                        <div class="flex items-center space-x-6">
+                            <!-- GitHub link -->
+                            <a href="https://github.com/arifulislam08173/Expert-Assist" target="_blank"
+                                class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                <svg class="ml-0 mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 .5C5.38.5 0 5.88 0 12.5c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.2.8-.6v-2.1c-3.34.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.5.8 1.5.8 1 .1 1.5-.7 1.5-.7.2-.7.5-1.1.8-1.3-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3 0 0 1-.3 3.3 1.2.9-.3 1.9-.5 2.9-.5s2 .2 2.9.5c2.3-1.6 3.3-1.2 3.3-1.2.6 1.5.2 2.7.1 3 .8.9 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .5.4.8 1 .8 2v2.9c0 .4.2.7.8.6C20.6 22.3 24 17.8 24 12.5 24 5.88 18.62.5 12 .5z" />
+                                </svg>
+                                View Project
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- NEW: Hotel Management System -->
+                <!-- Hotel Management System -->
                 <div class="bg-white dark:bg-dark-bg rounded-lg shadow-md overflow-hidden">
                     <div class="h-48 bg-gradient-to-r from-yellow-500 to-orange-500 flex items-center justify-center">
                         <!-- bed icon placeholder -->
@@ -1206,20 +913,23 @@
                                 class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm">MS
                                 SQL</span>
                         </div>
-                        <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
-                            View Project
-                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
+                        <div class="flex items-center space-x-6">
+                            <!-- GitHub link -->
+                            <a href="https://github.com/arifulislam08173/Hotel-Management" target="_blank"
+                                class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                <svg class="ml-0 mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 .5C5.38.5 0 5.88 0 12.5c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.2.8-.6v-2.1c-3.34.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1 1.5.8 1.5.8 1 .1 1.5-.7 1.5-.7.2-.7.5-1.1.8-1.3-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3 0 0 1-.3 3.3 1.2.9-.3 1.9-.5 2.9-.5s2 .2 2.9.5c2.3-1.6 3.3-1.2 3.3-1.2.6 1.5.2 2.7.1 3 .8.9 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .5.4.8 1 .8 2v2.9c0 .4.2.7.8.6C20.6 22.3 24 17.8 24 12.5 24 5.88 18.62.5 12 .5z" />
+                                </svg>
+                                View Project
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- keep your View All / Show More button here -->
-            <div class="text-center mt-10">
+            <!-- <div class="text-center mt-10">
                 <button id="view-all-btn"
                     class="inline-flex items-center justify-center bg-white dark:bg-dark-bg text-primary border-2 border-primary hover:bg-primary hover:text-white transition px-6 py-3 rounded-md font-medium">
                     View All Projects
@@ -1229,7 +939,20 @@
                             d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                 </button>
+            </div> -->
+            <div class="text-center mt-10">
+                <a id="view-all-btn" href="https://github.com/arifulislam08173" target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center bg-white dark:bg-dark-bg text-primary border-2 border-primary hover:bg-primary hover:text-white transition px-6 py-3 rounded-md font-medium">
+                    View All Projects
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
             </div>
+
         </div>
     </section>
 
@@ -1496,7 +1219,7 @@
                         <div class="mt-8">
                             <h4 class="text-xl font-semibold mb-4">Connect with me</h4>
                             <div class="flex space-x-4">
-                                <a href="#"
+                                <!-- <a href="#"
                                     class="h-12 w-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
                                     <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -1504,8 +1227,8 @@
                                             d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
                                         </path>
                                     </svg>
-                                </a>
-                                <a href="#"
+                                </a> -->
+                                <a href="https://www.linkedin.com/in/md-ariful-islam-evan-41609222b/" target="_blank"
                                     class="h-12 w-12 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition">
                                     <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg">

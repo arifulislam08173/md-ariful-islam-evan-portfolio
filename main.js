@@ -219,6 +219,48 @@
 
 // main.js
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ——— Dark / Light Mode Toggle —————————————————————
+  const desktopToggle = document.getElementById('theme-toggle');
+  const mobileToggle  = document.getElementById('theme-toggle-mobile');
+  const desktopIcon   = document.getElementById('theme-icon');
+  const mobileIcon    = document.getElementById('theme-icon-mobile');
+
+  function setTheme(mode) {
+    if (mode === 'dark') {
+      document.documentElement.classList.add('dark');
+      desktopIcon.classList.replace('fa-moon','fa-sun');
+      mobileIcon .classList.replace('fa-moon','fa-sun');
+    } else {
+      document.documentElement.classList.remove('dark');
+      desktopIcon.classList.replace('fa-sun','fa-moon');
+      mobileIcon .classList.replace('fa-sun','fa-moon');
+    }
+    localStorage.setItem('theme', mode);
+  }
+
+  // initialize on page load
+  (function initTheme(){
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' ||
+        (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  })();
+
+  // wire both toggles
+  [ desktopToggle, mobileToggle ].forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      setTheme(isDark ? 'light' : 'dark');
+    });
+  });
+
+
+
   // ——— Typewriter for Hero code block ——————————————
   const codeEl = document.getElementById("codeTypewriter");
   const lines = [
@@ -227,7 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
       '    this.name = "Md. Ariful Islam Evan";',
       '    this.role = "Software Engineer";',
       '    this.experience = "1+ years";',
-      '    this.languages = ["C", "C++", "Python", "PHP", "JavaScript"];',
+      '    this.languages = ["C++", "Python", "JavaScript"];',
       "  }",
       "",
       "  profile() {",
